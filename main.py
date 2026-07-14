@@ -1,6 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import os
+import joblib
+import pandas as pd
 
 # 1. Initialize FastAPI app
 app = FastAPI(
