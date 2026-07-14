@@ -16,7 +16,7 @@ class PropertyFeatures(BaseModel):
     Size_sqm: float    # e.g., 120.5
 
 # 3. Safely load the model pipeline
-MODEL_PATH = '/content/drive/MyDrive/linearregression/real_estate_model.joblib'
+MODEL_PATH = 'real_estate_model.joblib'
 
 if os.path.exists(MODEL_PATH):
     model = joblib.load(MODEL_PATH)
