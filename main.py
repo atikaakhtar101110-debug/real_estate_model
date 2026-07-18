@@ -24,7 +24,7 @@ app.add_middleware(
 # ----------------------------------------------------------------
 # Dynamically resolves path boundaries using absolute working directory locations
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "house_price_model.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "real_estate_model.joblib")
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Critical System Failure: Model weight matrix file not discovered at {MODEL_PATH}")
