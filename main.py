@@ -3,6 +3,11 @@ from pydantic import BaseModel
 import os
 import joblib
 import pandas as pd
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+
+# Your existing @app.post("/predict") route goes below...
 
 # 1. Initialize FastAPI app
 app = FastAPI(
