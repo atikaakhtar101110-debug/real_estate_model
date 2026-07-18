@@ -23,19 +23,28 @@ app.add_middleware(
 # 2. DATA PATH CONSTRAINTS & MODEL LOADING
 # ----------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# Updated to match your exact file name
 MODEL_PATH = os.path.join(BASE_DIR, "real_estate_model.joblib")
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Critical System Failure: Model file not discovered at {MODEL_PATH}")
 
-# Loaded using joblib instead of pickle
-model_artifacts = joblib.load(MODEL_PATH)
+# The joblib file contains the pipeline object directly
+model = joblib.load(MODEL_PATH)
 
-# Extract core components safely from the joblib dictionary structure
-model = model_artifacts["model"]
-scaler = model_artifacts.get("scaler", None)
-model_features = model_artifacts.get("features", [])
+# Dynamically pull feature names from the model if it's a trained pipeline/dataframe model
+# If features cannot be found, it will default to the standard schema
+try:
+    if hasattr(model, "feature_names_in_"):
+        model_features = list(model.feature_names_in_)
+    else:
+        # Fallback default feature schema matching your training dataset columns
+        model_features = [
+            "size_sqm", 
+            "location_New York", "location_Miami", "location_Los Angeles", "location_Chicago", "location_Houston",
+            "property_type_Villa", "property_type_Retail", "property_type_Warehouse", "property_type_Apartment", "property_type_Office"
+        ]
+except Exception:
+    model_features = []
 
 # ----------------------------------------------------------------
 # 3. DATA STRUCTURE DEFINITIONS (Pydantic Layer)
@@ -54,11 +63,11 @@ def read_root():
 
 @app.get("/metrics")
 def get_metrics():
-    """Returns historical cross-validation matrices saved within model artifacts."""
+    """Returns static default evaluation metrics."""
     return {
-        "r2": model_artifacts.get("r2_score", 0.88),
-        "mae": model_artifacts.get("mae", 15400),
-        "rmse": model_artifacts.get("rmse", 22100)
+        "r2": 0.88,
+        "mae": 15400,
+        "rmse": 22100
     }
 
 @app.post("/predict")
@@ -85,15 +94,10 @@ def predict_property_value(payload: PredictionRequest):
         if type_column in input_data.columns:
             input_data[type_column] = 1
 
-        # 5. Handle feature scaling alignment if integrated during pipeline training
-        if scaler is not None:
-            features_to_scale = ["size_sqm"]
-            input_data[features_to_scale] = scaler.transform(input_data[features_to_scale])
-
-        # 6. Execute model prediction mapping out tracking matrices
+        # 5. Execute model prediction directly on the pipeline object
         prediction = model.predict(input_data)[0]
         
-        # Avoid unhandled negative predictions from standard linear models
+        # Avoid negative numbers from standard linear models
         final_valuation = max(0.0, float(prediction))
 
         return {"predicted_price_usd": final_valuation}
