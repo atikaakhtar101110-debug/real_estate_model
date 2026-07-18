@@ -1,0 +1,1001 @@
+PropertyID,PropertyType,Location,Size_sqm,PriceUSD
+1,Warehouse,New York,289,933123
+2,Villa,Miami,412,919739
+3,Villa,New York,213,597561
+4,Villa,Los Angeles,88,227159
+5,Retail,New York,485,593105
+6,Retail,Chicago,253,193876
+7,Warehouse,Chicago,392,996692
+8,Retail,New York,245,665123
+9,Apartment,New York,319,853919
+10,Apartment,Houston,147,146936
+11,Retail,Los Angeles,164,195323
+12,Retail,Miami,189,635138
+13,Apartment,Miami,478,797436
+14,Villa,New York,209,66791
+15,Apartment,Los Angeles,120,87878
+16,Warehouse,Houston,372,132433
+17,Office,Miami,388,501849
+18,Warehouse,Miami,102,166246
+19,Office,Los Angeles,394,98530
+20,Retail,Los Angeles,188,517212
+21,Apartment,Chicago,251,142468
+22,Retail,Miami,429,855443
+23,Apartment,New York,468,989838
+24,Office,Los Angeles,224,199625
+25,Retail,Chicago,100,480984
+26,Apartment,Houston,484,869102
+27,Retail,Miami,462,812904
+28,Warehouse,Houston,360,461184
+29,Apartment,Chicago,476,385098
+30,Office,Miami,495,327593
+31,Apartment,Miami,283,994440
+32,Villa,Los Angeles,468,259179
+33,Office,Houston,475,349674
+34,Villa,Los Angeles,190,333410
+35,Office,New York,263,314364
+36,Warehouse,Los Angeles,196,670895
+37,Retail,Los Angeles,243,730356
+38,Warehouse,New York,279,131615
+39,Office,Miami,355,543311
+40,Villa,Los Angeles,69,894259
+41,Office,Houston,478,910099
+42,Apartment,Los Angeles,462,65366
+43,Retail,New York,435,562420
+44,Office,Houston,339,981525
+45,Office,Chicago,234,530223
+46,Villa,Chicago,450,965304
+47,Villa,Los Angeles,284,378194
+48,Apartment,Los Angeles,326,611863
+49,Retail,Houston,370,257234
+50,Office,Los Angeles,234,368695
+51,Apartment,New York,477,194643
+52,Apartment,Houston,248,105450
+53,Apartment,Houston,177,189472
+54,Apartment,Miami,297,964117
+55,Retail,New York,494,745271
+56,Warehouse,Los Angeles,461,463540
+57,Office,Chicago,135,237587
+58,Apartment,New York,413,967002
+59,Warehouse,Chicago,486,966112
+60,Warehouse,Houston,90,130151
+61,Office,Los Angeles,76,58462
+62,Warehouse,Chicago,463,374410
+63,Retail,Los Angeles,404,969700
+64,Office,Los Angeles,305,226078
+65,Retail,Houston,139,647914
+66,Villa,Los Angeles,320,148058
+67,Warehouse,New York,431,835252
+68,Villa,Los Angeles,122,979718
+69,Warehouse,Houston,124,796843
+70,Villa,Chicago,415,585457
+71,Warehouse,Los Angeles,270,570619
+72,Villa,Chicago,118,208212
+73,Warehouse,New York,179,686541
+74,Villa,New York,280,97132
+75,Villa,Houston,427,842872
+76,Retail,Chicago,438,328455
+77,Retail,Houston,453,426077
+78,Apartment,Chicago,418,755892
+79,Apartment,New York,103,758923
+80,Retail,Los Angeles,83,721723
+81,Retail,Miami,110,885590
+82,Villa,Chicago,277,331851
+83,Warehouse,Houston,371,876768
+84,Office,New York,138,645924
+85,Office,Miami,89,132165
+86,Retail,New York,370,285599
+87,Office,Chicago,277,560077
+88,Retail,New York,253,124999
+89,Office,Miami,422,470212
+90,Warehouse,Chicago,487,486698
+91,Retail,Miami,79,545640
+92,Office,Houston,428,595207
+93,Office,Houston,407,134444
+94,Villa,Miami,62,205446
+95,Warehouse,Houston,139,169326
+96,Office,Houston,250,741269
+97,Warehouse,Chicago,379,781436
+98,Apartment,Chicago,161,945353
+99,Villa,Miami,494,765143
+100,Apartment,Houston,499,750458
+101,Retail,Miami,309,248042
+102,Retail,Miami,462,417254
+103,Warehouse,Houston,186,979634
+104,Warehouse,Houston,357,409462
+105,Retail,New York,74,156014
+106,Retail,Houston,390,359009
+107,Apartment,Los Angeles,394,599377
+108,Warehouse,New York,60,59605
+109,Office,Chicago,155,239860
+110,Office,Houston,352,876530
+111,Villa,Miami,221,143973
+112,Villa,Miami,443,916408
+113,Apartment,Los Angeles,172,484943
+114,Villa,Los Angeles,294,118518
+115,Office,New York,179,950354
+116,Apartment,New York,402,331505
+117,Retail,Chicago,70,306421
+118,Warehouse,Houston,401,668642
+119,Apartment,Miami,141,979461
+120,Office,Miami,167,415582
+121,Apartment,Miami,121,350677
+122,Office,New York,397,621707
+123,Apartment,Miami,215,890689
+124,Warehouse,Chicago,59,941323
+125,Apartment,Los Angeles,242,158197
+126,Retail,Chicago,102,161762
+127,Retail,Chicago,134,888163
+128,Villa,Miami,495,205624
+129,Retail,Los Angeles,291,874956
+130,Office,Los Angeles,431,160892
+131,Warehouse,Los Angeles,319,109064
+132,Office,Miami,174,726105
+133,Office,Miami,163,792674
+134,Office,Houston,323,805113
+135,Office,Los Angeles,118,290321
+136,Villa,Houston,224,386706
+137,Apartment,Miami,75,133253
+138,Office,New York,199,704701
+139,Villa,Los Angeles,373,530099
+140,Warehouse,Houston,424,786575
+141,Warehouse,Houston,202,969720
+142,Office,Houston,441,674994
+143,Retail,Chicago,217,174250
+144,Warehouse,Miami,181,621662
+145,Warehouse,New York,61,415185
+146,Villa,New York,157,394734
+147,Apartment,Los Angeles,284,909694
+148,Villa,New York,446,414114
+149,Retail,New York,81,445904
+150,Villa,New York,352,550003
+151,Retail,Miami,290,371231
+152,Villa,Houston,157,989287
+153,Office,Los Angeles,426,896461
+154,Warehouse,Los Angeles,486,671572
+155,Office,Los Angeles,112,495950
+156,Retail,Houston,393,557806
+157,Retail,Los Angeles,212,629620
+158,Villa,Los Angeles,221,196285
+159,Retail,Miami,194,126179
+160,Retail,Houston,411,245007
+161,Retail,Miami,284,411901
+162,Office,Miami,366,398284
+163,Warehouse,Houston,119,976933
+164,Office,New York,216,459586
+165,Villa,Chicago,351,957257
+166,Warehouse,Chicago,115,688052
+167,Villa,Chicago,246,72331
+168,Warehouse,Houston,246,754980
+169,Retail,Chicago,259,967781
+170,Apartment,Miami,176,203498
+171,Villa,New York,162,779807
+172,Office,Chicago,118,698197
+173,Retail,Chicago,392,466928
+174,Retail,Los Angeles,50,105042
+175,Villa,Chicago,168,318068
+176,Villa,Houston,207,119544
+177,Apartment,Los Angeles,470,88137
+178,Apartment,New York,86,356993
+179,Retail,New York,275,599462
+180,Retail,New York,370,319182
+181,Warehouse,New York,191,325240
+182,Retail,Houston,245,750212
+183,Retail,Los Angeles,197,811783
+184,Villa,Miami,418,284896
+185,Office,New York,117,671529
+186,Office,New York,78,442623
+187,Apartment,Chicago,164,484593
+188,Villa,Miami,132,446952
+189,Villa,Miami,85,314202
+190,Warehouse,Miami,265,755712
+191,Retail,Chicago,429,764624
+192,Office,Los Angeles,125,268725
+193,Apartment,Miami,303,724706
+194,Warehouse,Houston,350,89110
+195,Villa,Los Angeles,342,401172
+196,Apartment,Houston,209,435742
+197,Villa,Chicago,455,697793
+198,Villa,Chicago,219,296602
+199,Warehouse,Los Angeles,260,798806
+200,Villa,Miami,422,65163
+201,Warehouse,Houston,364,526652
+202,Villa,New York,138,679178
+203,Warehouse,New York,336,148002
+204,Warehouse,Los Angeles,299,512393
+205,Apartment,Miami,199,219330
+206,Office,Los Angeles,128,381594
+207,Villa,Miami,352,528537
+208,Retail,Los Angeles,120,128971
+209,Warehouse,New York,53,558053
+210,Apartment,Los Angeles,174,643108
+211,Apartment,Miami,122,222897
+212,Office,Chicago,298,790790
+213,Apartment,Miami,86,890922
+214,Office,Houston,214,319647
+215,Office,Los Angeles,208,556727
+216,Villa,New York,206,312208
+217,Villa,Miami,383,777399
+218,Apartment,Miami,241,154804
+219,Office,Houston,108,358522
+220,Office,Houston,74,177067
+221,Apartment,New York,194,312898
+222,Villa,Chicago,305,273136
+223,Warehouse,New York,58,626707
+224,Office,Los Angeles,122,797093
+225,Warehouse,Houston,288,715272
+226,Office,Los Angeles,288,765760
+227,Apartment,New York,150,712889
+228,Apartment,Houston,415,636298
+229,Villa,Los Angeles,147,160145
+230,Villa,New York,125,570109
+231,Apartment,Miami,61,408674
+232,Villa,Houston,157,613196
+233,Villa,Miami,423,623689
+234,Office,Miami,227,115979
+235,Office,Los Angeles,432,221605
+236,Villa,Miami,244,981019
+237,Apartment,Miami,459,700741
+238,Villa,Houston,334,597636
+239,Warehouse,Los Angeles,217,489489
+240,Retail,Chicago,466,650491
+241,Retail,Chicago,457,655070
+242,Villa,Houston,420,876008
+243,Apartment,Los Angeles,204,157939
+244,Office,Miami,362,841482
+245,Retail,Chicago,208,335892
+246,Villa,Miami,142,228432
+247,Retail,Miami,398,827397
+248,Apartment,Houston,95,736236
+249,Office,Miami,192,714989
+250,Warehouse,Houston,287,483760
+251,Retail,New York,422,854551
+252,Office,New York,429,545834
+253,Office,Los Angeles,155,287263
+254,Villa,Los Angeles,52,222010
+255,Office,Houston,461,69660
+256,Retail,Chicago,377,910864
+257,Villa,New York,443,175812
+258,Apartment,Miami,208,587095
+259,Villa,Los Angeles,333,982555
+260,Warehouse,Chicago,227,827360
+261,Apartment,Chicago,403,360839
+262,Apartment,Los Angeles,412,512815
+263,Apartment,Miami,324,707501
+264,Office,Houston,277,591995
+265,Office,Los Angeles,262,648764
+266,Apartment,New York,327,772994
+267,Warehouse,New York,220,856324
+268,Warehouse,Miami,357,655463
+269,Apartment,New York,474,451311
+270,Warehouse,Los Angeles,245,549067
+271,Office,Houston,73,932362
+272,Office,Los Angeles,202,207064
+273,Warehouse,Chicago,302,970931
+274,Villa,Houston,101,459157
+275,Retail,Los Angeles,139,202554
+276,Apartment,Los Angeles,178,813526
+277,Apartment,Miami,51,399186
+278,Retail,Los Angeles,356,511891
+279,Apartment,Los Angeles,340,148265
+280,Villa,Chicago,291,846312
+281,Apartment,Los Angeles,208,196548
+282,Villa,Los Angeles,116,842742
+283,Villa,New York,312,977324
+284,Villa,Miami,206,831286
+285,Apartment,Los Angeles,399,964433
+286,Apartment,Houston,116,414459
+287,Villa,Houston,491,446831
+288,Villa,Los Angeles,339,846270
+289,Villa,New York,51,193160
+290,Apartment,Chicago,459,320795
+291,Office,New York,278,173325
+292,Office,New York,444,57425
+293,Retail,Houston,284,312174
+294,Villa,Miami,205,87615
+295,Retail,Chicago,224,580033
+296,Warehouse,New York,85,413401
+297,Apartment,Miami,488,998279
+298,Warehouse,Chicago,280,317447
+299,Apartment,Miami,64,226295
+300,Villa,Houston,55,193174
+301,Warehouse,Chicago,448,953998
+302,Apartment,Miami,234,186831
+303,Apartment,Chicago,88,222503
+304,Apartment,Houston,69,647287
+305,Warehouse,Los Angeles,500,259878
+306,Villa,Miami,459,168372
+307,Villa,Miami,225,332393
+308,Villa,Miami,438,393093
+309,Office,New York,224,352569
+310,Warehouse,Los Angeles,136,314031
+311,Warehouse,Los Angeles,206,795380
+312,Villa,Chicago,438,370443
+313,Villa,Miami,262,429783
+314,Office,New York,338,303771
+315,Warehouse,Los Angeles,103,844103
+316,Retail,Chicago,365,65284
+317,Villa,Los Angeles,489,619764
+318,Retail,Los Angeles,106,811665
+319,Warehouse,Miami,339,698470
+320,Warehouse,Miami,275,871012
+321,Apartment,Chicago,119,636599
+322,Villa,Chicago,141,425490
+323,Office,New York,385,881002
+324,Villa,Miami,491,434316
+325,Apartment,Houston,464,588348
+326,Office,New York,90,207719
+327,Villa,Miami,426,935784
+328,Office,Chicago,122,591306
+329,Villa,Chicago,392,862160
+330,Villa,Miami,279,699774
+331,Office,Los Angeles,439,844985
+332,Retail,Chicago,150,981908
+333,Office,New York,148,518708
+334,Villa,Houston,124,798891
+335,Villa,New York,204,575587
+336,Villa,New York,224,157808
+337,Office,Los Angeles,141,809375
+338,Office,Miami,53,756257
+339,Office,Los Angeles,301,866764
+340,Apartment,Houston,256,643653
+341,Warehouse,Houston,242,964566
+342,Warehouse,Chicago,412,644343
+343,Villa,Los Angeles,170,859530
+344,Retail,Chicago,61,962848
+345,Office,Houston,276,822066
+346,Villa,Chicago,78,643619
+347,Villa,New York,179,622216
+348,Warehouse,New York,421,184036
+349,Warehouse,Houston,473,347510
+350,Apartment,Chicago,254,200631
+351,Villa,New York,212,228816
+352,Office,Houston,288,716266
+353,Apartment,Chicago,92,188431
+354,Retail,New York,396,629532
+355,Apartment,Houston,437,642714
+356,Warehouse,Houston,115,221889
+357,Office,New York,318,879192
+358,Retail,Los Angeles,312,895599
+359,Warehouse,Los Angeles,198,318735
+360,Retail,Chicago,113,355670
+361,Office,Miami,236,565159
+362,Office,Chicago,158,637299
+363,Apartment,Los Angeles,129,607653
+364,Retail,New York,132,700150
+365,Warehouse,Chicago,182,277804
+366,Warehouse,Los Angeles,193,142245
+367,Apartment,New York,291,417649
+368,Retail,Houston,90,290885
+369,Retail,New York,448,72439
+370,Retail,Chicago,210,938914
+371,Retail,Los Angeles,352,344124
+372,Warehouse,New York,115,487971
+373,Warehouse,New York,252,291019
+374,Villa,Chicago,54,923387
+375,Office,Houston,231,418950
+376,Warehouse,Chicago,89,529930
+377,Office,Chicago,365,922215
+378,Office,Los Angeles,219,461844
+379,Office,Houston,303,262629
+380,Retail,Chicago,342,707258
+381,Retail,New York,225,670176
+382,Warehouse,Chicago,476,387667
+383,Villa,Miami,271,758317
+384,Retail,Houston,222,705797
+385,Warehouse,Chicago,115,786045
+386,Warehouse,Chicago,173,851317
+387,Warehouse,Houston,128,785439
+388,Office,Miami,486,129779
+389,Warehouse,Chicago,389,446612
+390,Warehouse,Chicago,158,562598
+391,Warehouse,Miami,314,903360
+392,Office,Chicago,101,766903
+393,Warehouse,Houston,316,590981
+394,Retail,Miami,204,521873
+395,Villa,Chicago,120,99526
+396,Villa,Houston,111,824474
+397,Apartment,Chicago,408,84452
+398,Apartment,Miami,250,189301
+399,Warehouse,Los Angeles,481,506181
+400,Retail,Los Angeles,253,63311
+401,Retail,New York,275,904593
+402,Retail,Los Angeles,130,312367
+403,Retail,Miami,258,965811
+404,Apartment,Los Angeles,245,540896
+405,Office,Los Angeles,414,308172
+406,Villa,Los Angeles,139,588873
+407,Villa,Chicago,431,335091
+408,Villa,Chicago,224,471046
+409,Apartment,Houston,179,734481
+410,Apartment,Houston,160,882563
+411,Warehouse,Miami,127,720427
+412,Retail,Chicago,374,311384
+413,Warehouse,Los Angeles,149,987138
+414,Villa,Miami,56,635887
+415,Warehouse,Chicago,191,217585
+416,Villa,Los Angeles,248,172531
+417,Villa,Los Angeles,227,676828
+418,Villa,Chicago,226,67681
+419,Retail,Chicago,180,936002
+420,Warehouse,Miami,474,190819
+421,Apartment,Miami,399,459191
+422,Warehouse,Miami,80,630114
+423,Retail,New York,144,79278
+424,Villa,Miami,166,602022
+425,Office,Los Angeles,239,938596
+426,Apartment,Miami,332,372447
+427,Villa,Los Angeles,394,189646
+428,Retail,Chicago,313,333049
+429,Retail,New York,315,249185
+430,Apartment,New York,79,897458
+431,Apartment,Los Angeles,442,543428
+432,Apartment,Houston,325,515693
+433,Villa,Chicago,413,320935
+434,Office,Miami,490,225948
+435,Retail,Los Angeles,253,491931
+436,Apartment,Houston,424,319985
+437,Villa,Miami,370,213861
+438,Apartment,Los Angeles,121,89241
+439,Retail,New York,91,614864
+440,Office,Los Angeles,427,824888
+441,Retail,Houston,360,698694
+442,Office,Houston,291,989571
+443,Warehouse,New York,315,409533
+444,Villa,Houston,173,917942
+445,Apartment,Los Angeles,332,272340
+446,Office,New York,288,117942
+447,Warehouse,Miami,453,260090
+448,Apartment,Miami,373,772756
+449,Retail,New York,207,425772
+450,Warehouse,Chicago,210,137286
+451,Retail,Houston,149,668311
+452,Retail,New York,261,235579
+453,Villa,Chicago,398,597209
+454,Office,Chicago,366,672674
+455,Villa,Los Angeles,423,963683
+456,Retail,Miami,301,281217
+457,Warehouse,Miami,356,400104
+458,Warehouse,New York,229,247709
+459,Villa,Houston,292,268597
+460,Warehouse,Los Angeles,162,737408
+461,Villa,Houston,491,756694
+462,Villa,Chicago,214,845303
+463,Office,New York,196,579981
+464,Retail,Los Angeles,470,646616
+465,Apartment,New York,340,479868
+466,Retail,Chicago,274,148617
+467,Villa,Houston,317,400507
+468,Apartment,Houston,409,649761
+469,Apartment,Chicago,85,832859
+470,Office,Houston,347,875551
+471,Retail,Los Angeles,302,97720
+472,Office,New York,231,920489
+473,Villa,Houston,416,842578
+474,Office,Houston,401,989997
+475,Retail,Miami,234,536567
+476,Villa,New York,82,751358
+477,Retail,Houston,167,624097
+478,Villa,Houston,371,501049
+479,Villa,Miami,454,586556
+480,Warehouse,Chicago,496,627665
+481,Villa,Houston,347,558724
+482,Warehouse,Houston,147,814035
+483,Retail,Houston,174,510685
+484,Warehouse,Los Angeles,203,621698
+485,Apartment,Chicago,66,529446
+486,Retail,Miami,109,528481
+487,Retail,Miami,339,247133
+488,Apartment,Los Angeles,120,362654
+489,Villa,Miami,466,373646
+490,Apartment,Chicago,485,263089
+491,Retail,New York,222,380648
+492,Office,New York,355,206425
+493,Retail,Miami,438,621497
+494,Villa,Miami,201,662529
+495,Office,Miami,464,63608
+496,Apartment,Los Angeles,83,596327
+497,Villa,Houston,99,755746
+498,Apartment,New York,154,854180
+499,Warehouse,New York,65,355862
+500,Apartment,Houston,327,820483
+501,Apartment,Los Angeles,146,73663
+502,Office,Houston,295,859893
+503,Apartment,Los Angeles,397,401400
+504,Villa,Miami,88,545393
+505,Apartment,Houston,93,961902
+506,Apartment,Chicago,167,234627
+507,Office,New York,437,699771
+508,Retail,New York,53,761583
+509,Warehouse,New York,164,152561
+510,Warehouse,Houston,254,103867
+511,Villa,New York,312,484054
+512,Retail,Los Angeles,486,774088
+513,Apartment,Chicago,136,563787
+514,Warehouse,Houston,187,984455
+515,Apartment,Miami,51,778185
+516,Apartment,New York,433,275547
+517,Warehouse,Chicago,429,329069
+518,Apartment,New York,138,702212
+519,Office,Chicago,335,583833
+520,Office,Los Angeles,426,930381
+521,Warehouse,Chicago,435,469392
+522,Villa,Miami,214,396171
+523,Apartment,New York,264,190335
+524,Apartment,Los Angeles,220,501147
+525,Villa,Los Angeles,354,174469
+526,Retail,Chicago,313,853619
+527,Villa,Houston,123,427154
+528,Villa,New York,438,244688
+529,Warehouse,Los Angeles,178,874183
+530,Villa,Miami,58,774782
+531,Apartment,New York,103,737653
+532,Office,Miami,400,784046
+533,Retail,Miami,242,436170
+534,Warehouse,New York,492,303918
+535,Warehouse,Los Angeles,181,273125
+536,Office,Miami,428,227857
+537,Warehouse,Miami,373,676452
+538,Retail,New York,441,584812
+539,Warehouse,Houston,141,693763
+540,Warehouse,New York,442,563779
+541,Apartment,Los Angeles,170,208765
+542,Retail,Miami,142,648526
+543,Villa,Chicago,252,275183
+544,Retail,Houston,240,179681
+545,Office,Chicago,345,617580
+546,Villa,Houston,427,202961
+547,Retail,New York,185,115162
+548,Office,Chicago,364,488900
+549,Office,New York,197,268867
+550,Villa,Houston,201,357773
+551,Retail,Los Angeles,167,221372
+552,Warehouse,Los Angeles,244,587604
+553,Office,New York,53,256150
+554,Villa,Miami,440,511382
+555,Warehouse,Los Angeles,229,679726
+556,Retail,Los Angeles,320,271142
+557,Office,New York,394,275153
+558,Office,Los Angeles,397,219583
+559,Villa,Miami,452,665560
+560,Retail,Chicago,112,560559
+561,Villa,Houston,156,403461
+562,Villa,Houston,302,834576
+563,Apartment,Chicago,209,122088
+564,Retail,New York,179,994201
+565,Office,Houston,281,457838
+566,Apartment,Houston,463,569386
+567,Apartment,Miami,327,395108
+568,Retail,Los Angeles,249,839479
+569,Apartment,Houston,231,574193
+570,Warehouse,Los Angeles,265,509837
+571,Apartment,Los Angeles,315,99810
+572,Office,Houston,461,510647
+573,Apartment,New York,439,317601
+574,Warehouse,New York,176,294683
+575,Office,Los Angeles,476,437622
+576,Office,Miami,356,705284
+577,Apartment,Los Angeles,416,158282
+578,Apartment,New York,235,134778
+579,Warehouse,Los Angeles,206,996081
+580,Villa,New York,373,495184
+581,Apartment,Los Angeles,344,459009
+582,Retail,Houston,231,645043
+583,Retail,Miami,200,62081
+584,Villa,Chicago,239,269462
+585,Warehouse,Los Angeles,155,376021
+586,Villa,Houston,252,169671
+587,Office,Chicago,235,387257
+588,Warehouse,Chicago,82,295675
+589,Retail,Chicago,303,915368
+590,Retail,Miami,369,74619
+591,Apartment,Houston,134,915661
+592,Retail,Miami,496,445953
+593,Retail,Chicago,499,382452
+594,Office,Chicago,78,575600
+595,Retail,New York,121,117594
+596,Office,Miami,254,451812
+597,Office,Houston,450,183403
+598,Retail,Chicago,59,977703
+599,Apartment,New York,441,885029
+600,Villa,Chicago,264,609154
+601,Apartment,Miami,307,243996
+602,Warehouse,Houston,237,494214
+603,Apartment,New York,387,281535
+604,Office,Miami,496,912948
+605,Warehouse,Miami,195,107699
+606,Warehouse,Los Angeles,238,914009
+607,Office,Chicago,115,130371
+608,Office,New York,235,860427
+609,Villa,Chicago,254,621280
+610,Office,Houston,80,727630
+611,Retail,Houston,92,401659
+612,Apartment,Los Angeles,55,183569
+613,Villa,Miami,51,423761
+614,Office,New York,136,114959
+615,Apartment,Los Angeles,306,601960
+616,Villa,New York,144,835372
+617,Retail,New York,309,818384
+618,Office,Houston,332,714127
+619,Warehouse,Los Angeles,324,423988
+620,Villa,Miami,353,556925
+621,Warehouse,Chicago,179,175585
+622,Office,Chicago,314,328378
+623,Retail,New York,203,80011
+624,Office,Houston,84,917074
+625,Apartment,Los Angeles,254,228749
+626,Villa,Chicago,55,218094
+627,Apartment,Miami,121,975298
+628,Office,Miami,167,181296
+629,Apartment,Miami,250,958040
+630,Warehouse,Chicago,292,160017
+631,Villa,Miami,86,185750
+632,Warehouse,Miami,145,369458
+633,Office,Houston,477,64865
+634,Retail,Houston,287,441942
+635,Warehouse,Chicago,331,592938
+636,Apartment,Chicago,422,347354
+637,Office,New York,292,243614
+638,Office,Houston,218,332171
+639,Villa,Houston,361,169950
+640,Apartment,Miami,469,471551
+641,Villa,Los Angeles,209,316768
+642,Apartment,Houston,280,53893
+643,Villa,Houston,315,734568
+644,Retail,Miami,312,645135
+645,Villa,New York,385,311467
+646,Apartment,Miami,128,260546
+647,Villa,Los Angeles,349,718096
+648,Retail,Chicago,328,953759
+649,Warehouse,Los Angeles,198,863348
+650,Retail,Houston,286,724777
+651,Retail,Chicago,242,929405
+652,Office,Miami,267,838670
+653,Warehouse,Houston,165,118017
+654,Office,New York,291,108319
+655,Retail,New York,125,420084
+656,Retail,Chicago,241,60935
+657,Villa,Miami,372,418290
+658,Apartment,Los Angeles,203,759214
+659,Warehouse,Miami,428,55118
+660,Warehouse,Houston,230,83833
+661,Office,Houston,72,123877
+662,Warehouse,New York,432,107392
+663,Retail,Los Angeles,273,659608
+664,Villa,Los Angeles,196,974927
+665,Apartment,Houston,114,548924
+666,Villa,Houston,184,758569
+667,Apartment,Chicago,426,894462
+668,Warehouse,Chicago,73,104447
+669,Apartment,New York,245,997351
+670,Warehouse,Los Angeles,81,699764
+671,Warehouse,Los Angeles,261,914693
+672,Apartment,Houston,287,861923
+673,Office,Los Angeles,234,274772
+674,Warehouse,Miami,237,188468
+675,Villa,Los Angeles,496,806447
+676,Retail,Chicago,306,311011
+677,Office,Houston,432,848103
+678,Warehouse,Houston,306,894334
+679,Office,Chicago,135,430106
+680,Retail,Chicago,121,433089
+681,Apartment,Los Angeles,96,615855
+682,Retail,Houston,223,541681
+683,Retail,Miami,381,88900
+684,Villa,Houston,484,469012
+685,Warehouse,Los Angeles,155,660841
+686,Apartment,Chicago,175,522212
+687,Office,Miami,136,284407
+688,Villa,Houston,423,328749
+689,Warehouse,Miami,394,489237
+690,Retail,Los Angeles,358,833699
+691,Office,Houston,325,412394
+692,Warehouse,Chicago,302,786859
+693,Villa,New York,239,952717
+694,Office,New York,432,156928
+695,Warehouse,Houston,224,641133
+696,Apartment,Houston,114,534499
+697,Warehouse,Los Angeles,303,899724
+698,Office,New York,270,695836
+699,Villa,Miami,391,656590
+700,Villa,Los Angeles,193,932102
+701,Apartment,Houston,486,115156
+702,Apartment,Los Angeles,106,879084
+703,Office,New York,258,647584
+704,Apartment,Los Angeles,323,128064
+705,Retail,Los Angeles,280,357285
+706,Office,Chicago,337,823158
+707,Warehouse,Chicago,224,976452
+708,Retail,Houston,458,240787
+709,Office,Los Angeles,469,962275
+710,Apartment,Houston,443,494244
+711,Warehouse,Houston,386,163504
+712,Office,Chicago,207,850045
+713,Villa,Chicago,240,331649
+714,Retail,Los Angeles,433,607258
+715,Apartment,Chicago,321,192114
+716,Apartment,Houston,301,825093
+717,Apartment,Los Angeles,79,549341
+718,Warehouse,Los Angeles,476,888748
+719,Apartment,Houston,294,488388
+720,Villa,New York,191,525623
+721,Office,Miami,231,336183
+722,Office,New York,345,238205
+723,Office,Los Angeles,306,124510
+724,Apartment,Miami,343,871681
+725,Apartment,Chicago,212,905795
+726,Office,New York,240,638076
+727,Villa,Miami,52,272625
+728,Warehouse,Houston,290,347808
+729,Villa,New York,110,819127
+730,Warehouse,Houston,150,252738
+731,Villa,New York,444,883000
+732,Warehouse,New York,145,810089
+733,Villa,New York,360,515369
+734,Office,New York,427,904906
+735,Warehouse,Los Angeles,347,223995
+736,Office,Houston,446,336110
+737,Retail,Houston,112,820482
+738,Office,Houston,390,670076
+739,Retail,New York,131,975608
+740,Apartment,Chicago,204,471037
+741,Apartment,New York,465,694148
+742,Apartment,Chicago,252,884560
+743,Retail,Los Angeles,168,716657
+744,Apartment,New York,425,270904
+745,Apartment,Miami,252,932946
+746,Apartment,Miami,383,866538
+747,Villa,Houston,345,142098
+748,Warehouse,New York,469,912164
+749,Office,Miami,352,325710
+750,Retail,Miami,499,327995
+751,Apartment,Miami,319,700949
+752,Warehouse,Houston,131,740629
+753,Warehouse,New York,194,338501
+754,Office,New York,309,819691
+755,Office,New York,88,314896
+756,Apartment,Chicago,114,695905
+757,Warehouse,Houston,68,625634
+758,Apartment,New York,411,978142
+759,Villa,New York,377,850221
+760,Apartment,Miami,190,82335
+761,Apartment,Los Angeles,181,163207
+762,Warehouse,Los Angeles,256,509933
+763,Apartment,Miami,383,109948
+764,Retail,New York,422,402451
+765,Retail,New York,418,403302
+766,Office,Los Angeles,403,663472
+767,Office,Chicago,305,641723
+768,Villa,Miami,325,352255
+769,Retail,Chicago,311,651039
+770,Office,New York,306,735197
+771,Villa,Chicago,132,570791
+772,Retail,Miami,174,894114
+773,Apartment,New York,246,812245
+774,Apartment,Miami,269,508649
+775,Villa,New York,349,631033
+776,Villa,Los Angeles,203,575919
+777,Apartment,Chicago,328,643651
+778,Warehouse,New York,320,698516
+779,Warehouse,Chicago,126,933792
+780,Apartment,Miami,169,559299
+781,Villa,Miami,294,958826
+782,Apartment,Miami,349,741900
+783,Warehouse,Los Angeles,112,293926
+784,Office,New York,454,772752
+785,Apartment,Houston,55,68596
+786,Villa,Los Angeles,58,447743
+787,Retail,Los Angeles,337,312865
+788,Warehouse,Los Angeles,282,351247
+789,Apartment,Los Angeles,52,516454
+790,Retail,Los Angeles,329,504941
+791,Office,Los Angeles,401,224760
+792,Retail,New York,255,384810
+793,Villa,Chicago,118,509546
+794,Retail,Los Angeles,338,876110
+795,Warehouse,Miami,76,760045
+796,Apartment,Miami,352,366243
+797,Warehouse,Houston,410,983816
+798,Apartment,Los Angeles,178,243857
+799,Warehouse,Miami,128,807272
+800,Retail,Miami,237,753876
+801,Villa,New York,154,123094
+802,Retail,Miami,61,128282
+803,Warehouse,Houston,320,621472
+804,Warehouse,Miami,137,791409
+805,Villa,Chicago,349,865351
+806,Villa,Chicago,467,701335
+807,Office,Chicago,74,572357
+808,Villa,New York,229,997349
+809,Office,Houston,401,912754
+810,Warehouse,Houston,100,119454
+811,Villa,Miami,414,473888
+812,Retail,Los Angeles,332,348872
+813,Retail,New York,113,583454
+814,Office,Chicago,373,911880
+815,Apartment,Chicago,345,642954
+816,Villa,Houston,214,68377
+817,Villa,Chicago,398,99270
+818,Warehouse,Miami,469,760286
+819,Office,Miami,209,541256
+820,Office,New York,486,770782
+821,Apartment,Miami,176,692018
+822,Office,Miami,388,906242
+823,Villa,New York,359,822513
+824,Villa,Miami,207,459237
+825,Retail,New York,318,281317
+826,Warehouse,Miami,229,137015
+827,Apartment,Miami,177,849301
+828,Apartment,Houston,87,625975
+829,Apartment,Los Angeles,180,315582
+830,Retail,Miami,123,818409
+831,Apartment,New York,378,421556
+832,Retail,Houston,444,323444
+833,Retail,Chicago,96,275936
+834,Retail,New York,264,780076
+835,Apartment,Miami,131,120438
+836,Warehouse,Los Angeles,338,719817
+837,Villa,New York,494,215717
+838,Villa,Los Angeles,473,801048
+839,Office,Chicago,412,904548
+840,Retail,Chicago,355,788046
+841,Apartment,Miami,61,965973
+842,Apartment,Miami,274,500698
+843,Apartment,New York,406,213485
+844,Apartment,Los Angeles,194,445070
+845,Apartment,New York,376,944713
+846,Office,Miami,479,727071
+847,Warehouse,Chicago,171,163365
+848,Apartment,Los Angeles,398,181188
+849,Warehouse,Los Angeles,381,615702
+850,Villa,Chicago,448,765712
+851,Villa,Los Angeles,340,282887
+852,Retail,Houston,463,51696
+853,Warehouse,Houston,299,226865
+854,Warehouse,Chicago,63,973472
+855,Office,New York,405,692536
+856,Retail,Houston,87,969302
+857,Villa,Miami,460,133758
+858,Warehouse,Chicago,487,384722
+859,Office,Chicago,457,480667
+860,Apartment,Houston,457,663951
+861,Villa,Houston,264,593719
+862,Retail,Houston,288,647534
+863,Apartment,Los Angeles,193,133879
+864,Office,New York,397,219834
+865,Retail,Chicago,257,174572
+866,Villa,Miami,277,159511
+867,Retail,Houston,225,259319
+868,Office,New York,121,398147
+869,Apartment,Miami,209,313260
+870,Warehouse,Chicago,150,290842
+871,Apartment,New York,54,752997
+872,Villa,Miami,146,262498
+873,Office,Houston,71,264321
+874,Villa,Chicago,157,446922
+875,Villa,Los Angeles,180,162873
+876,Villa,Los Angeles,460,751303
+877,Office,Chicago,325,862951
+878,Warehouse,Miami,496,678927
+879,Apartment,Houston,197,822753
+880,Warehouse,Houston,430,466156
+881,Apartment,Houston,161,356174
+882,Apartment,Miami,318,562060
+883,Villa,New York,376,230074
+884,Retail,Chicago,159,478737
+885,Office,Los Angeles,445,704996
+886,Retail,Miami,306,185170
+887,Retail,Houston,329,866428
+888,Office,Los Angeles,101,404754
+889,Warehouse,Houston,118,665991
+890,Apartment,Chicago,153,441925
+891,Warehouse,Los Angeles,88,876734
+892,Apartment,New York,153,727658
+893,Warehouse,Los Angeles,282,349015
+894,Warehouse,Miami,428,926719
+895,Retail,Chicago,446,217274
+896,Villa,New York,74,564328
+897,Office,Los Angeles,54,660982
+898,Villa,Miami,482,966066
+899,Retail,Los Angeles,474,750409
+900,Apartment,Houston,249,454634
+901,Retail,Houston,464,72886
+902,Retail,New York,89,717408
+903,Apartment,Miami,296,827600
+904,Villa,New York,374,854166
+905,Apartment,Chicago,124,797421
+906,Office,New York,307,997603
+907,Office,New York,187,146956
+908,Apartment,Houston,151,387014
+909,Villa,Houston,478,147654
+910,Apartment,Miami,485,562264
+911,Warehouse,Chicago,204,806122
+912,Warehouse,New York,400,185265
+913,Warehouse,New York,303,635603
+914,Apartment,New York,111,403906
+915,Office,New York,132,583612
+916,Retail,Houston,273,317881
+917,Retail,New York,268,638926
+918,Retail,Houston,160,762973
+919,Apartment,Los Angeles,171,538591
+920,Apartment,Houston,162,853562
+921,Warehouse,Chicago,279,202367
+922,Warehouse,New York,159,98007
+923,Villa,Chicago,241,247958
+924,Retail,Miami,457,613146
+925,Retail,Chicago,144,302452
+926,Office,New York,358,757133
+927,Villa,Houston,111,979433
+928,Office,New York,166,365407
+929,Villa,Chicago,119,692248
+930,Retail,Chicago,432,96762
+931,Retail,Miami,250,479676
+932,Warehouse,Miami,75,56904
+933,Retail,New York,265,562483
+934,Apartment,New York,95,201883
+935,Retail,Chicago,164,970370
+936,Retail,Houston,277,693075
+937,Apartment,Miami,416,82900
+938,Warehouse,New York,51,329422
+939,Office,New York,114,504412
+940,Office,Los Angeles,269,73618
+941,Warehouse,Houston,142,174142
+942,Villa,Houston,233,89069
+943,Warehouse,Los Angeles,122,120592
+944,Apartment,Miami,109,478641
+945,Apartment,Chicago,232,334670
+946,Villa,New York,204,976609
+947,Apartment,New York,225,341005
+948,Office,Houston,184,88565
+949,Villa,Chicago,131,175674
+950,Warehouse,Houston,462,652000
+951,Warehouse,Los Angeles,248,677012
+952,Apartment,Miami,394,694125
+953,Apartment,Houston,499,233567
+954,Apartment,Chicago,234,245762
+955,Warehouse,Houston,423,85317
+956,Villa,New York,372,571431
+957,Villa,Chicago,203,397614
+958,Apartment,Chicago,356,885895
+959,Villa,Miami,224,978632
+960,Retail,Miami,81,994842
+961,Villa,Miami,461,581038
+962,Warehouse,Los Angeles,74,174842
+963,Villa,Chicago,304,449959
+964,Office,Chicago,378,729547
+965,Warehouse,Los Angeles,81,920858
+966,Apartment,Chicago,288,521681
+967,Retail,Los Angeles,63,847092
+968,Apartment,New York,211,88312
+969,Retail,Chicago,213,54612
+970,Retail,Miami,191,914494
+971,Retail,Miami,100,880392
+972,Warehouse,New York,179,811878
+973,Office,Miami,361,834176
+974,Villa,Houston,92,952304
+975,Apartment,New York,365,894966
+976,Office,New York,231,798515
+977,Warehouse,New York,283,508467
+978,Villa,New York,498,197898
+979,Warehouse,Miami,258,184048
+980,Retail,Houston,263,200833
+981,Office,New York,423,302264
+982,Warehouse,Chicago,101,114971
+983,Office,New York,54,216427
+984,Apartment,Miami,254,674771
+985,Retail,Chicago,449,856687
+986,Apartment,New York,118,236638
+987,Office,Houston,437,640957
+988,Warehouse,Miami,335,785955
+989,Villa,Chicago,174,557075
+990,Villa,Houston,491,702263
+991,Apartment,Chicago,298,120863
+992,Retail,Miami,85,948896
+993,Office,Houston,61,518126
+994,Warehouse,Chicago,164,378850
+995,Retail,Miami,212,815406
+996,Retail,New York,73,118846
+997,Retail,Miami,292,297432
+998,Retail,New York,222,613594
+999,Office,Chicago,56,151444
+1000,Apartment,Chicago,211,706410
