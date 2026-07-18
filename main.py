@@ -31,7 +31,7 @@ class PropertyFeatures(BaseModel):
 
 # 4. Global variables for model and computed metrics
 MODEL_PATH = 'real_estate_model.joblib'
-DATA_PATH = 'Properties.csv'  # UPDATED: Set directly to your uploaded file name
+DATA_PATH = 'RealEstateAgencyData.xlsx - Properties.csv'  # UPDATED: Set directly to your uploaded file name
 
 live_metrics = {
     "r2": "N/A",
