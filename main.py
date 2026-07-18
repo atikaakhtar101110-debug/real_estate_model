@@ -1,5 +1,5 @@
 import os
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 from pydantic import BaseModel
@@ -22,17 +22,17 @@ app.add_middleware(
 # ----------------------------------------------------------------
 # 2. DATA PATH CONSTRAINTS & MODEL LOADING
 # ----------------------------------------------------------------
-# Dynamically resolves path boundaries using absolute working directory locations
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# Updated to match your exact file name
 MODEL_PATH = os.path.join(BASE_DIR, "real_estate_model.joblib")
 
 if not os.path.exists(MODEL_PATH):
-    raise FileNotFoundError(f"Critical System Failure: Model weight matrix file not discovered at {MODEL_PATH}")
+    raise FileNotFoundError(f"Critical System Failure: Model file not discovered at {MODEL_PATH}")
 
-with open(MODEL_PATH, "rb") as file:
-    model_artifacts = pickle.load(file)
+# Loaded using joblib instead of pickle
+model_artifacts = joblib.load(MODEL_PATH)
 
-# Extract core pipelines safely from pickle protocol
+# Extract core components safely from the joblib dictionary structure
 model = model_artifacts["model"]
 scaler = model_artifacts.get("scaler", None)
 model_features = model_artifacts.get("features", [])
@@ -103,5 +103,4 @@ def predict_property_value(payload: PredictionRequest):
 
 if __name__ == "__main__":
     import uvicorn
-    # Bound to local loop configurations for optional isolated debugging steps
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
