@@ -181,43 +181,50 @@ def metrics():
 # Prediction Endpoint
 # ============================================================
 
+
+
 @app.post("/predict")
 def predict(payload: PredictionRequest):
     start_time = time.perf_counter()
 
     try:
-        # -----------------------------
-        # Create empty feature dataframe
-        # -----------------------------
-        input_df = pd.DataFrame(
-            [{feature: 0 for feature in MODEL_FEATURES}]
-        )
+        # Ensure exact structural matching for one-hot flags
+        # Match case formatting (e.g., "new york" -> "New York")
+        formatted_location = payload.location.strip().title()
+        formatted_property = payload.property_type.strip().title()
 
-        # Numerical feature
+        # -----------------------------
+        # Create empty feature dataframe with strict float/int typing
+        # -----------------------------
+        input_data = {feature: 0.0 for feature in MODEL_FEATURES}
+        input_df = pd.DataFrame([input_data], dtype=float)
+
+        # Explicit numerical mapping
         if "size_sqm" in input_df.columns:
             input_df.loc[0, "size_sqm"] = float(payload.size_sqm)
 
-        # One-hot encoding
-        location_column = f"location_{payload.location}"
-        property_column = f"property_type_{payload.property_type}"
+        # Strictly verify column existences before flagging
+        location_column = f"location_{formatted_location}"
+        property_column = f"property_type_{formatted_property}"
 
         if location_column in input_df.columns:
-            input_df.loc[0, location_column] = 1
+            input_df.loc[0, location_column] = 1.0
+        else:
+            # Optional: Raise an alert if the client sends an unsupported location
+            raise ValueError(f"Location '{payload.location}' not supported by this model.")
 
         if property_column in input_df.columns:
-            input_df.loc[0, property_column] = 1
+            input_df.loc[0, property_column] = 1.0
+        else:
+            raise ValueError(f"Property type '{payload.property_type}' not supported by this model.")
 
         # Prediction
         prediction = model.predict(input_df)[0]
         prediction = max(0.0, float(prediction))
 
-        # Response time
         elapsed = (time.perf_counter() - start_time) * 1000
-
-        # Update live statistics
         update_live_stats(prediction, elapsed)
 
-        # Return response
         return {
             "success": True,
             "predicted_price_usd": round(prediction, 2),
@@ -225,26 +232,13 @@ def predict(payload: PredictionRequest):
             "live_metrics": live_stats
         }
 
+    except ValueError as val_err:
+        raise HTTPException(
+            status_code=400,
+            detail={"success": False, "message": str(val_err)}
+        )
     except Exception as e:
         raise HTTPException(
             status_code=500,
-            detail={
-                "success": False,
-                "message": str(e)
-            }
+            detail={"success": False, "message": str(e)}
         )
-
-
-# ============================================================
-# Run Locally
-# ============================================================
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=True
-    )
