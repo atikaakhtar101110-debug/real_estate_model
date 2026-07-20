@@ -141,6 +141,7 @@ def update_live_stats(prediction: float, response_time: float):
             live_stats["lowest_prediction"] is None
             or prediction < live_stats["lowest_prediction"]
         ):
+            live_stats["lowest_prediction"] = prediction
             # ============================================================
 # Root Endpoint
 # ============================================================
