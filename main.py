@@ -117,13 +117,9 @@ class PredictionRequest(BaseModel):
 # ============================================================
 
 def update_live_stats(prediction: float, response_time: float):
-
     with stats_lock:
-
         live_stats["total_predictions"] += 1
-
         count = live_stats["total_predictions"]
-
         previous_average = live_stats["average_prediction"]
 
         live_stats["average_prediction"] = (
@@ -131,7 +127,6 @@ def update_live_stats(prediction: float, response_time: float):
         ) / count
 
         live_stats["last_prediction"] = prediction
-
         live_stats["response_time_ms"] = round(response_time, 2)
 
         if prediction > live_stats["highest_prediction"]:
@@ -142,7 +137,9 @@ def update_live_stats(prediction: float, response_time: float):
             or prediction < live_stats["lowest_prediction"]
         ):
             live_stats["lowest_prediction"] = prediction
-            # ============================================================
+
+
+# ============================================================
 # Root Endpoint
 # ============================================================
 
@@ -186,15 +183,12 @@ def metrics():
 
 @app.post("/predict")
 def predict(payload: PredictionRequest):
-
     start_time = time.perf_counter()
 
     try:
-
         # -----------------------------
         # Create empty feature dataframe
         # -----------------------------
-
         input_df = pd.DataFrame(
             [{feature: 0 for feature in MODEL_FEATURES}]
         )
@@ -215,7 +209,6 @@ def predict(payload: PredictionRequest):
 
         # Prediction
         prediction = model.predict(input_df)[0]
-
         prediction = max(0.0, float(prediction))
 
         # Response time
@@ -233,7 +226,6 @@ def predict(payload: PredictionRequest):
         }
 
     except Exception as e:
-
         raise HTTPException(
             status_code=500,
             detail={
@@ -248,7 +240,6 @@ def predict(payload: PredictionRequest):
 # ============================================================
 
 if __name__ == "__main__":
-
     import uvicorn
 
     uvicorn.run(
@@ -257,4 +248,3 @@ if __name__ == "__main__":
         port=8000,
         reload=True
     )
-            live_stats["lowest_prediction"] = prediction
