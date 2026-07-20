@@ -1,110 +1,259 @@
 import os
+import time
+import threading
 import joblib
-import numpy as np
 import pandas as pd
-from pydantic import BaseModel
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 
-app = FastAPI(title="UrbanVal AI Backend Engine")
+# ============================================================
+# UrbanVal AI - Production Backend
+# Compatible with:
+# ✔ Hugging Face Spaces
+# ✔ Render
+# ✔ Localhost
+# ============================================================
 
-# ----------------------------------------------------------------
-# 1. CORS CONFIGURATION (Prevents Browser Blockages)
-# ----------------------------------------------------------------
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # Permits local index.html to communicate with Render
-    allow_credentials=True,
-    allow_methods=["*"],  # Permits GET, POST, OPTIONS
-    allow_headers=["*"],  # Permits all metadata headers
+app = FastAPI(
+    title="UrbanVal AI Backend",
+    version="2.0.0",
+    description="Real Estate Price Prediction API"
 )
 
-# ----------------------------------------------------------------
-# 2. DATA PATH CONSTRAINTS & MODEL LOADING
-# ----------------------------------------------------------------
+# ============================================================
+# CORS
+# ============================================================
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ============================================================
+# Load ML Model
+# ============================================================
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "real_estate_model.joblib")
 
 if not os.path.exists(MODEL_PATH):
-    raise FileNotFoundError(f"Critical System Failure: Model file not discovered at {MODEL_PATH}")
+    raise FileNotFoundError(
+        f"Model file not found:\n{MODEL_PATH}"
+    )
 
-# The joblib file contains the pipeline object directly
-model = joblib.load(MODEL_PATH)
+try:
+    model = joblib.load(MODEL_PATH)
+except Exception as e:
+    raise RuntimeError(f"Unable to load model: {e}")
 
-# Dynamically pull feature names from the model if it's a trained pipeline/dataframe model
-# If features cannot be found, it will default to the standard schema
+# ============================================================
+# Detect Feature Names
+# ============================================================
+
+DEFAULT_FEATURES = [
+    "size_sqm",
+    "location_New York",
+    "location_Miami",
+    "location_Los Angeles",
+    "location_Chicago",
+    "location_Houston",
+    "property_type_Villa",
+    "property_type_Retail",
+    "property_type_Warehouse",
+    "property_type_Apartment",
+    "property_type_Office"
+]
+
 try:
     if hasattr(model, "feature_names_in_"):
-        model_features = list(model.feature_names_in_)
+        MODEL_FEATURES = list(model.feature_names_in_)
     else:
-        # Fallback default feature schema matching your training dataset columns
-        model_features = [
-            "size_sqm", 
-            "location_New York", "location_Miami", "location_Los Angeles", "location_Chicago", "location_Houston",
-            "property_type_Villa", "property_type_Retail", "property_type_Warehouse", "property_type_Apartment", "property_type_Office"
-        ]
+        MODEL_FEATURES = DEFAULT_FEATURES
 except Exception:
-    model_features = []
+    MODEL_FEATURES = DEFAULT_FEATURES
 
-# ----------------------------------------------------------------
-# 3. DATA STRUCTURE DEFINITIONS (Pydantic Layer)
-# ----------------------------------------------------------------
+# ============================================================
+# Live Statistics
+# ============================================================
+
+stats_lock = threading.Lock()
+
+live_stats = {
+    "total_predictions": 0,
+    "average_prediction": 0.0,
+    "highest_prediction": 0.0,
+    "lowest_prediction": None,
+    "last_prediction": 0.0,
+    "response_time_ms": 0.0
+}
+
+# ============================================================
+# Model Evaluation Metrics
+# (Replace with your actual values after training)
+# ============================================================
+
+MODEL_METRICS = {
+    "r2": 0.88,
+    "mae": 15400,
+    "rmse": 22100
+}
+
+# ============================================================
+# Request Model
+# ============================================================
+
 class PredictionRequest(BaseModel):
     property_type: str
     location: str
     size_sqm: float
 
-# ----------------------------------------------------------------
-# 4. OPERATIONAL API ENDPOINTS
-# ----------------------------------------------------------------
-@app.get("/")
-def read_root():
-    return {"status": "online", "engine": "UrbanVal AI Inference Core"}
+# ============================================================
+# Helper Function
+# ============================================================
 
-@app.get("/metrics")
-def get_metrics():
-    """Returns static default evaluation metrics."""
+def update_live_stats(prediction: float, response_time: float):
+
+    with stats_lock:
+
+        live_stats["total_predictions"] += 1
+
+        count = live_stats["total_predictions"]
+
+        previous_average = live_stats["average_prediction"]
+
+        live_stats["average_prediction"] = (
+            (previous_average * (count - 1)) + prediction
+        ) / count
+
+        live_stats["last_prediction"] = prediction
+
+        live_stats["response_time_ms"] = round(response_time, 2)
+
+        if prediction > live_stats["highest_prediction"]:
+            live_stats["highest_prediction"] = prediction
+
+        if (
+            live_stats["lowest_prediction"] is None
+            or prediction < live_stats["lowest_prediction"]
+        ):
+            # ============================================================
+# Root Endpoint
+# ============================================================
+
+@app.get("/")
+def home():
     return {
-        "r2": 0.88,
-        "mae": 15400,
-        "rmse": 22100
+        "status": "online",
+        "engine": "UrbanVal AI Backend",
+        "version": "2.0.0",
+        "message": "API is running successfully."
     }
 
+
+# ============================================================
+# Health Check
+# ============================================================
+
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy",
+        "model_loaded": model is not None
+    }
+
+
+# ============================================================
+# Model Metrics
+# ============================================================
+
+@app.get("/metrics")
+def metrics():
+    return {
+        "model_metrics": MODEL_METRICS,
+        "live_metrics": live_stats
+    }
+
+
+# ============================================================
+# Prediction Endpoint
+# ============================================================
+
 @app.post("/predict")
-def predict_property_value(payload: PredictionRequest):
+def predict(payload: PredictionRequest):
+
+    start_time = time.perf_counter()
+
     try:
-        # 1. Extract inputs safely matching JavaScript layout
-        input_size = float(payload.size_sqm)
-        input_location = str(payload.location)
-        input_type = str(payload.property_type)
 
-        # 2. Build template DataFrame matching One-Hot encoding schema exactly
-        input_data = pd.DataFrame([{col: 0 for col in model_features}])
-        
-        # 3. Assign structural values safely
-        if "size_sqm" in input_data.columns:
-            input_data["size_sqm"] = input_size
-        
-        # 4. Map One-Hot encoded categoricals
-        loc_column = f"location_{input_location}"
-        type_column = f"property_type_{input_type}"
-        
-        if loc_column in input_data.columns:
-            input_data[loc_column] = 1
-        if type_column in input_data.columns:
-            input_data[type_column] = 1
+        # -----------------------------
+        # Create empty feature dataframe
+        # -----------------------------
 
-        # 5. Execute model prediction directly on the pipeline object
-        prediction = model.predict(input_data)[0]
-        
-        # Avoid negative numbers from standard linear models
-        final_valuation = max(0.0, float(prediction))
+        input_df = pd.DataFrame(
+            [{feature: 0 for feature in MODEL_FEATURES}]
+        )
 
-        return {"predicted_price_usd": final_valuation}
+        # Numerical feature
+        if "size_sqm" in input_df.columns:
+            input_df.loc[0, "size_sqm"] = float(payload.size_sqm)
+
+        # One-hot encoding
+        location_column = f"location_{payload.location}"
+        property_column = f"property_type_{payload.property_type}"
+
+        if location_column in input_df.columns:
+            input_df.loc[0, location_column] = 1
+
+        if property_column in input_df.columns:
+            input_df.loc[0, property_column] = 1
+
+        # Prediction
+        prediction = model.predict(input_df)[0]
+
+        prediction = max(0.0, float(prediction))
+
+        # Response time
+        elapsed = (time.perf_counter() - start_time) * 1000
+
+        # Update live statistics
+        update_live_stats(prediction, elapsed)
+
+        # Return response
+        return {
+            "success": True,
+            "predicted_price_usd": round(prediction, 2),
+            "model_metrics": MODEL_METRICS,
+            "live_metrics": live_stats
+        }
 
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Inference Engine Crash Trace: {str(e)}")
+
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "success": False,
+                "message": str(e)
+            }
+        )
+
+
+# ============================================================
+# Run Locally
+# ============================================================
 
 if __name__ == "__main__":
+
     import uvicorn
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True
+    )
+            live_stats["lowest_prediction"] = prediction
